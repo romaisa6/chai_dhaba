@@ -3,9 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Visit Chai Corner Dhaba for freshly brewed chai and tasty snacks.">
+  <meta name="description" content="Welcome to Chai Corner Dhaba in Islamabad. Enjoy fresh chai, crispy snacks, and a cozy atmosphere.">
   <title>Chai Corner Dhaba | Home</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero {
+      padding: 56px 52px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .hero-content .intro {
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-image-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .features-section {
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      margin-top: 6px;
+      color: var(--brown);
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 32px 24px;
+        grid-template-columns: 1fr;
+      }
+      .hero-image {
+        height: 240px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -23,63 +89,88 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">A little cup of comfort</p>
-        <h1>Good chai.<br><span>Good company.</span></h1>
+      <div class="hero-content">
+        <p class="eyebrow">Islamabad’s Cozy Corner Spot</p>
+        <h1>Fresh Chai, <span>Warm Vibes</span></h1>
         <p class="intro">
-          Welcome to Chai Corner Dhaba—a cozy stop for freshly brewed chai,
-          tasty snacks, and a relaxing break.
+          Step into Chai Corner Dhaba for slow-simmered doodh patti, aromatic cardamom spices, and crispy evening snacks shared with friendly faces.
         </p>
-        <a class="button" href="menu.html">Explore our menu</a>
-
-        <div class="welcome-note">
-          <span class="note-line" aria-hidden="true"></span>
-          <p>Freshly brewed daily with aromatic whole spices</p>
+        <div class="hero-actions">
+          <a class="button" href="menu.html">Explore Menu</a>
+          <button
+            class="button"
+            type="button"
+            onclick="window.alert('Freshly brewed Doodh Patti and Karak Chai are ready now at Chai Corner Dhaba!');"
+            style="background: var(--chai); border-color: var(--chai);"
+          >
+            Today's Special Alert
+          </button>
         </div>
       </div>
-
-      <figure class="hero-photo">
+      <div class="hero-image-wrap">
         <img
-          src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=900&q=85"
-          alt="Top-down view of a warm cup of spiced chai surrounded by tea leaves and whole spices"
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=900&q=85"
+          alt="Steaming cup of hot chai with biscuits"
         >
-        <figcaption class="photo-label">Chai time is the best time</figcaption>
-      </figure>
+      </div>
     </section>
 
-    <section class="favorites">
-      <p class="eyebrow">From our dhaba</p>
-      <h2>A perfect pause in your day</h2>
-      <p class="section-intro">Settle in, sip slowly, and enjoy something delicious.</p>
+    <!-- Featured Favorites Section -->
+    <section class="features-section">
+      <div class="section-header">
+        <p class="eyebrow">Handcrafted Daily</p>
+        <h2>Dhaba Favorites</h2>
+      </div>
 
       <div class="favorite-grid">
         <article class="favorite-card">
-          <span class="icon" aria-hidden="true">&#9749;</span>
-          <h3>Freshly brewed chai</h3>
-          <p>Comforting tea made for long conversations and little breaks.</p>
+          <img
+            src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=85"
+            alt="Doodh Patti Chai"
+            style="width: 100%; height: 180px; object-fit: cover;"
+          >
+          <div style="padding: 20px;">
+            <h3 style="margin-bottom: 6px; color: var(--brown);">Doodh Patti Chai</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">Rich full-cream milk simmered slowly with strong tea leaves.</p>
+          </div>
         </article>
 
         <article class="favorite-card">
-          <span class="icon" aria-hidden="true">&#129360;</span>
-          <h3>Tea-time treats</h3>
-          <p>Sweet and savory bites to enjoy with your favorite cup.</p>
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=85"
+            alt="Crispy Samosas"
+            style="width: 100%; height: 180px; object-fit: cover;"
+          >
+          <div style="padding: 20px;">
+            <h3 style="margin-bottom: 6px; color: var(--brown);">Crispy Samosas</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">Golden flaky pastry pockets served with house mint chutney.</p>
+          </div>
         </article>
 
         <article class="favorite-card">
-          <span class="icon" aria-hidden="true">&#10024;</span>
-          <h3>Warm hospitality</h3>
-          <p>A welcoming corner where everyone can relax.</p>
+          <img
+            src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85"
+            alt="Lachha Paratha"
+            style="width: 100%; height: 180px; object-fit: cover;"
+          >
+          <div style="padding: 20px;">
+            <h3 style="margin-bottom: 6px; color: var(--brown);">Tawa Lachha Paratha</h3>
+            <p style="margin: 0; color: var(--muted); font-size: 0.95rem;">Flaky multi-layered flatbread brushed with fresh desi ghee.</p>
+          </div>
         </article>
       </div>
     </section>
 
+    <!-- Visit Callout Section -->
     <section class="visit">
       <div>
-        <p class="eyebrow">Drop by for a cup</p>
-        <h2>Ready for your evening chai break?</h2>
+        <p class="eyebrow">Drop by today</p>
+        <h2>Find us at G-13/4 Street 786, Islamabad</h2>
       </div>
-      <a class="button button-light" href="contact.html">Visit the dhaba</a>
+      <a class="button button-light" href="contact.html">Contact &amp; Hours</a>
     </section>
   </main>
 
@@ -90,4 +181,3 @@
   </footer>
 </body>
 </html>
-```[cite: 1, 3]

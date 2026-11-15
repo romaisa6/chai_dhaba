@@ -3,12 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the chai, other drinks, and snacks menu with photos at Chai Corner Dhaba.">
   <title>Chai Corner Dhaba | Menu</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .menu-banner {
+      padding: 44px 52px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .menu-banner h1 {
+      margin-bottom: 14px;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+    }
+
+    .menu-banner .intro {
+      margin: 0 auto;
+    }
+
+    .menu-section {
+      padding: 56px 0 12px;
+    }
+
+    .menu-section-header {
+      margin-bottom: 26px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .menu-section-header h2 {
+      margin: 0;
+      color: var(--brown);
+      font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+    }
+
+    .menu-section-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .menu-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-card-img-link {
+      display: block;
+      overflow: hidden;
+    }
+
+    .menu-card-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .menu-card-body {
+      padding: 22px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .menu-card-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .menu-card-top h3 {
+      margin: 0;
+    }
+
+    .price-tag {
+      flex-shrink: 0;
+      padding: 3px 10px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--chai);
+      font-family: Arial, sans-serif;
+      font-size: 0.84rem;
+      font-weight: bold;
+    }
+
+    .menu-card-link {
+      margin-top: auto;
+      padding-top: 14px;
+      display: inline-block;
+      color: var(--chai);
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .menu-card-link:hover {
+      color: var(--brown);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .menu-banner {
+        padding: 30px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Chai Corner <span>Dhaba</span></a>
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">CC</span>
+      <span>Chai Corner<small>DHABA</small></span>
+    </a>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a class="active" href="menu.html">Menu</a>
@@ -18,31 +140,228 @@
   </header>
 
   <main>
-    <section class="page-heading">
-      <p class="eyebrow">Fresh from the kettle and tawa</p>
-      <h1>Our Menu</h1>
-      <p>Enjoy a cup of chai with something delicious.</p>
+    <section class="menu-banner">
+      <p class="eyebrow">Fresh from the kettle &amp; tawa</p>
+      <h1>Our <span>Dhaba Menu</span></h1>
+      <p class="intro">
+        From slow-simmered doodh patti to crisp evening snacks, every item is made fresh to order.
+      </p>
     </section>
 
-    <section class="section">
-      <h2>Chai</h2>
-      <div class="cards">
-        <article class="card"><h3>Doodh Patti Chai</h3><p>Slow-simmered tea with milk.</p><strong>Rs. 150</strong></article>
-        <article class="card"><h3>Karak Masala Chai</h3><p>Strong chai with warming spices.</p><strong>Rs. 180</strong></article>
-        <article class="card"><h3>Elaichi Chai</h3><p>Fragrant tea with cardamom.</p><strong>Rs. 180</strong></article>
+    <!-- Chai Section -->
+    <section class="menu-section" aria-labelledby="chai-heading">
+      <div class="menu-section-header">
+        <div>
+          <p class="eyebrow">Signature Brews</p>
+          <h2 id="chai-heading">Chai</h2>
+        </div>
+        <p>Served piping hot in traditional cups</p>
+      </div>
+
+      <div class="favorite-grid">
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=85"
+              alt="Cup of creamy Doodh Patti Chai"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Doodh Patti Chai</h3>
+              <span class="price-tag">Rs. 150</span>
+            </div>
+            <p>Full-cream milk simmered slowly with strong black tea leaves and a touch of sugar.</p>
+            <a class="menu-card-link" href="contact.html">Order for table &rarr;</a>
+          </div>
+        </article>
+
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=800&q=85"
+              alt="Karak Masala Chai surrounded by whole cardamom, cinnamon, and tea leaves"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Karak Masala Chai</h3>
+              <span class="price-tag">Rs. 180</span>
+            </div>
+            <p>Bold, spiced tea infused with crushed green cardamom, ginger, cinnamon, and cloves.</p>
+            <a class="menu-card-link" href="gallery.html">View in gallery &rarr;</a>
+          </div>
+        </article>
+
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=85"
+              alt="Aromatic cup of Elaichi and Kashmiri Chai"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Elaichi &amp; Kashmiri Chai</h3>
+              <span class="price-tag">Rs. 220</span>
+            </div>
+            <p>Fragrant cardamom brew or velvety pink tea finished with crushed pistachios and almonds.</p>
+            <a class="menu-card-link" href="contact.html">Order for table &rarr;</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Snacks</h2>
-      <div class="cards">
-        <article class="card"><h3>Samosa</h3><p>Crisp pastry with a savory filling.</p><strong>Rs. 120</strong></article>
-        <article class="card"><h3>Lachha Paratha</h3><p>Flaky, layered flatbread.</p><strong>Rs. 160</strong></article>
-        <article class="card"><h3>Bun Maska</h3><p>Soft bun with a buttery filling.</p><strong>Rs. 140</strong></article>
+    <!-- Other Drinks Section -->
+    <section class="menu-section" aria-labelledby="drinks-heading">
+      <div class="menu-section-header">
+        <div>
+          <p class="eyebrow">Coolers &amp; Comforts</p>
+          <h2 id="drinks-heading">Other Drinks</h2>
+        </div>
+        <p>Refreshing sips and warm non-tea favorites</p>
       </div>
+
+      <div class="favorite-grid">
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?auto=format&fit=crop&w=800&q=85"
+              alt="Glass of chilled Sweet and Salted Lassi"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Sweet &amp; Salted Lassi</h3>
+              <span class="price-tag">Rs. 200</span>
+            </div>
+            <p>Chilled whipped yogurt drink served classic sweet with malai or lightly salted with roasted cumin.</p>
+            <a class="menu-card-link" href="contact.html">Order for table &rarr;</a>
+          </div>
+        </article>
+
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=85"
+              alt="Chilled Fresh Mint Margarita with lime"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Fresh Mint Margarita</h3>
+              <span class="price-tag">Rs. 240</span>
+            </div>
+            <p>Crushed ice blended with garden-fresh mint leaves, tangy lime juice, and a hint of black salt.</p>
+            <a class="menu-card-link" href="contact.html">Order for table &rarr;</a>
+          </div>
+        </article>
+
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=85"
+              alt="Frothy cup of Dhaba Beat Coffee"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Dhaba Beat Coffee</h3>
+              <span class="price-tag">Rs. 250</span>
+            </div>
+            <p>Hand-whipped frothy coffee topped with hot steamed milk and a dusting of cocoa.</p>
+            <a class="menu-card-link" href="contact.html">Order for table &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Snacks Section -->
+    <section class="menu-section" aria-labelledby="snacks-heading" style="padding-bottom: 64px;">
+      <div class="menu-section-header">
+        <div>
+          <p class="eyebrow">Tea-Time Pairings</p>
+          <h2 id="snacks-heading">Snacks</h2>
+        </div>
+        <p>Savory bites and sweet classics to share</p>
+      </div>
+
+      <div class="favorite-grid">
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=85"
+              alt="Plate of crispy Aloo and Qeema Samosas"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Aloo &amp; Qeema Samosa</h3>
+              <span class="price-tag">Rs. 120</span>
+            </div>
+            <p>Golden, flaky pastry pockets filled with spiced potatoes or minced meat, served with mint chutney.</p>
+            <a class="menu-card-link" href="gallery.html">View in gallery &rarr;</a>
+          </div>
+        </article>
+
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=85"
+              alt="Golden Crispy Lachha Paratha"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Crispy Lachha Paratha</h3>
+              <span class="price-tag">Rs. 160</span>
+            </div>
+            <p>Flaky multi-layered flatbread pan-roasted with desi ghee—ideal alongside a hot cup of chai.</p>
+            <a class="menu-card-link" href="gallery.html">View in gallery &rarr;</a>
+          </div>
+        </article>
+
+        <article class="favorite-card menu-card">
+          <a class="menu-card-img-link" href="gallery.html">
+            <img
+              class="menu-card-img"
+              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85"
+              alt="Toasted Bun Maska and Cake Rusk"
+            >
+          </a>
+          <div class="menu-card-body">
+            <div class="menu-card-top">
+              <h3>Bun Maska &amp; Cake Rusk</h3>
+              <span class="price-tag">Rs. 140</span>
+            </div>
+            <p>Toasted soft bun slathered with sweet butter, paired with crunchy bakery cake rusks for dipping.</p>
+            <a class="menu-card-link" href="contact.html">Order for table &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="visit">
+      <div>
+        <p class="eyebrow">Planning a group visit?</p>
+        <h2>Get in touch for table bookings or custom orders</h2>
+      </div>
+      <a class="button button-light" href="contact.html">Contact us</a>
     </section>
   </main>
 
-  <footer class="site-footer">Chai Corner Dhaba · Fresh chai and friendly faces</footer>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">Chai Corner Dhaba</a>
+    <p>Fresh chai, friendly faces, and a place to pause.</p>
+    <p class="copyright">&copy; 2026 Chai Corner Dhaba &bull; Created by Romaisa (i263244)</p>
+  </footer>
 </body>
 </html>

@@ -3,207 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Get in touch with Chai Corner Dhaba for inquiries, hours, and location details.">
   <title>Chai Corner Dhaba | Contact</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .contact-banner {
-      padding: 44px 52px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .contact-banner h1 {
-      margin-bottom: 14px;
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-    }
-
-    .contact-banner .intro {
-      margin: 0 auto;
-      max-width: 500px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 30px;
-      margin-bottom: 60px;
-    }
-
-    .contact-info-card,
-    .contact-form-card {
-      padding: 36px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-    }
-
-    .contact-info-card h2,
-    .contact-form-card h2 {
-      margin-bottom: 10px;
-      color: var(--brown);
-      font-size: clamp(1.5rem, 3vw, 2rem);
-    }
-
-    .info-group {
-      margin-top: 24px;
-    }
-
-    .info-group h3 {
-      margin-bottom: 6px;
-      color: var(--brown);
-      font-size: 1.1rem;
-    }
-
-    .info-group p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--brown);
-      font-family: Arial, sans-serif;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 12px 16px;
-      background: var(--cream);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      color: var(--brown-deep);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1rem;
-    }
-
-    .form-control:focus {
-      outline: none;
-      border-color: var(--chai);
-      background: var(--paper);
-    }
-
-    textarea.form-control {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .button-submit {
-      width: 100%;
-      cursor: pointer;
-      justify-content: center;
-    }
-
-    @media (max-width: 760px) {
-      .contact-banner {
-        padding: 30px 24px;
-      }
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .contact-info-card,
-      .contact-form-card {
-        padding: 26px 20px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="INDEX.html">
-      <span class="brand-mark" aria-hidden="true">CC</span>
-      <span>Chai Corner<small>DHABA</small></span>
-    </a>
-
+    <a class="brand" href="index.html">Chai Corner <span>Dhaba</span></a>
     <nav aria-label="Main navigation">
-      <a href="INDEX.html">Home</a>
-      <a href="MENU.html">Menu</a>
-      <a href="GALLERY.html">Gallery</a>
-      <a class="active" href="CONTACT.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="active" href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="contact-banner">
+    <section class="page-heading">
       <p class="eyebrow">We'd love to hear from you</p>
-      <h1>Get in <span>Touch</span></h1>
-      <p class="intro">
-        Drop by for a steaming cup of tea or reach out with any questions, table bookings, or feedback.
-      </p>
+      <h1>Contact Us</h1>
+      <p>Visit us or send a message.</p>
     </section>
 
-    <div class="contact-grid">
-      <!-- Contact Information Card -->
-      <section class="contact-info-card">
-        <p class="eyebrow">Location &amp; Hours</p>
+    <section class="section contact-layout">
+      <article class="card">
         <h2>Visit the Dhaba</h2>
-        <p class="section-intro">Find our cozy corner stall or get in touch directly.</p>
+        <p><strong>Address:</strong> [Add your address]</p>
+        <p><strong>Phone:</strong> [Add your phone number]</p>
+        <p><strong>Hours:</strong> [Add your opening hours]</p>
+      </article>
 
-        <div class="info-group">
-          <h3>Address</h3>
-          <p>G-13/4 street 786, Islamabad</p>
-        </div>
-
-        <div class="info-group">
-          <h3>Phone Number</h3>
-          <p>+923457689456</p>
-        </div>
-
-        <div class="info-group">
-          <h3>Opening Hours</h3>
-          <p>Monday – Saturday: 9:30 a.m – 11:00 p.m</p>
-          <p>Sunday:  8:00 a.m </p>
-        </div>
-      </section>
-
-      <!-- Contact Form Card -->
-      <section class="contact-form-card">
-        <p class="eyebrow">Send a Message</p>
-        <h2>Drop Us a Line</h2>
-        <p class="section-intro">Have a query or a custom order request? Let us know.</p>
-
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email" required>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea class="form-control" id="message" name="message" placeholder="Write your message or inquiry here..." required></textarea>
-          </div>
-
-          <button class="button button-submit" type="submit">Send Message</button>
-          
-          <!-- New button with window.alert() matching design -->
-          <button class="button button-submit" type="button" onclick="window.alert('Thank you for connecting with Chai Corner Dhaba! We will get back to you shortly.');" style="margin-top: 12px; background: var(--chai); border-color: var(--chai);">
-            Quick Notice Alert
-          </button>
-        </form>
-      </section>
-    </div>
+      <article class="card">
+        <h2>Send a Message</h2>
+        <label for="visitor-name">Your name</label>
+        <input id="visitor-name" type="text" placeholder="Enter your name">
+        <label for="visitor-message">Your message</label>
+        <textarea id="visitor-message" placeholder="Write your message"></textarea>
+        <button class="button" type="button"
+          onclick="window.alert('Thank you for connecting with Chai Corner Dhaba! We will get back to you shortly.')">
+          Send Message
+        </button>
+      </article>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="footer-brand" href="INDEX.html">Chai Corner Dhaba</a>
-    <p>Fresh chai, friendly faces, and a place to pause.</p>
-    <p class="copyright">&copy; 2026 Chai Corner Dhaba &bull; Created by Romaisa (i263244)</p>
-  </footer>
+  <footer class="site-footer">Chai Corner Dhaba · Fresh chai and friendly faces</footer>
 </body>
 </html>
-```[cite: 3, 10]

@@ -3,12 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Chai Corner Dhaba for questions and visits.">
   <title>Chai Corner Dhaba | Contact</title>
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .contact-banner {
+      margin-bottom: 32px;
+      padding: 40px 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .contact-banner h1 {
+      margin-bottom: 10px;
+      color: var(--brown);
+    }
+
+    .contact-grid {
+      margin-bottom: 55px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 24px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .contact-card h2 {
+      color: var(--brown);
+    }
+
+    .contact-card p {
+      color: var(--muted);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--brown);
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 13px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--brown-dark);
+      font: inherit;
+    }
+
+    textarea.form-control {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .button-submit {
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Chai Corner <span>Dhaba</span></a>
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">CC</span>
+      <span>Chai Corner<small>DHABA</small></span>
+    </a>
+
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
@@ -18,34 +99,69 @@
   </header>
 
   <main>
-    <section class="page-heading">
-      <p class="eyebrow">We'd love to hear from you</p>
+    <section class="contact-banner">
+      <p class="eyebrow">We’d love to hear from you</p>
       <h1>Contact Us</h1>
-      <p>Visit us or send a message.</p>
+      <p>Visit Chai Corner Dhaba or send us a message.</p>
     </section>
 
-    <section class="section contact-layout">
-      <article class="card">
+    <section class="contact-grid">
+      <article class="contact-card">
+        <p class="eyebrow">Location and hours</p>
         <h2>Visit the Dhaba</h2>
+
         <p><strong>Address:</strong> [Add your address]</p>
         <p><strong>Phone:</strong> [Add your phone number]</p>
-        <p><strong>Hours:</strong> [Add your opening hours]</p>
+        <p><strong>Opening hours:</strong> [Add your opening hours]</p>
       </article>
 
-      <article class="card">
-        <h2>Send a Message</h2>
-        <label for="visitor-name">Your name</label>
-        <input id="visitor-name" type="text" placeholder="Enter your name">
-        <label for="visitor-message">Your message</label>
-        <textarea id="visitor-message" placeholder="Write your message"></textarea>
-        <button class="button" type="button"
-          onclick="window.alert('Thank you for connecting with Chai Corner Dhaba! We will get back to you shortly.')">
+      <section class="contact-card">
+        <p class="eyebrow">Send a message</p>
+        <h2>Get in Touch</h2>
+
+        <div class="form-group">
+          <label for="visitor-name">Your name</label>
+          <input
+            class="form-control"
+            type="text"
+            id="visitor-name"
+            placeholder="Enter your name"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="visitor-email">Email address</label>
+          <input
+            class="form-control"
+            type="email"
+            id="visitor-email"
+            placeholder="Enter your email"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="visitor-message">Your message</label>
+          <textarea
+            class="form-control"
+            id="visitor-message"
+            placeholder="Write your message"
+          ></textarea>
+        </div>
+
+        <button
+          class="button button-submit"
+          type="button"
+          onclick="window.alert('Thank you for connecting with Chai Corner Dhaba! We will get back to you shortly.')"
+        >
           Send Message
         </button>
-      </article>
+      </section>
     </section>
   </main>
 
-  <footer class="site-footer">Chai Corner Dhaba · Fresh chai and friendly faces</footer>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">Chai Corner Dhaba</a>
+    <p>Fresh chai, friendly faces, and a place to pause.</p>
+  </footer>
 </body>
 </html>

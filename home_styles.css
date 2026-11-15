@@ -141,7 +141,7 @@ h1 span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--brown);
+  background: var(--orange);
   border: 1px solid var(--brown);
   border-radius: 6px;
   color: var(--paper);
